@@ -45,6 +45,29 @@ public class Page2Servlet extends HttpServlet {
 		try {
 			Class.forName(driverName);
 			Connection connection=DriverManager.getConnection(url,id,pass);
+			
+			
+			
+			
+			PreparedStatement rt = 
+					connection.prepareStatement(
+							"select NUMA,NUMB from OUBO where NUMA=? and NUMB=?"
+						);
+			rt.setString(1, sNumA);
+			rt.setString(2, sNumB);
+			
+			ResultSet ss = rt.executeQuery();
+			if(ss.next()==true) {
+				System.out.println("èdï°");
+				RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/JSP/page2.5.jsp");
+				rd.forward(request, response);
+			}
+			
+			
+			
+			
+			else {
+			
 			PreparedStatement st = 
 					connection.prepareStatement(
 							"Insert into OUBO Values(?,?,?)"
@@ -56,7 +79,7 @@ public class Page2Servlet extends HttpServlet {
 			st.executeUpdate();
 			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/JSP/page2.jsp");
 			rd.forward(request, response);
-			
+			}
 		}catch(SQLException e) {
 			System.out.println("SQLException");
 			response.getWriter().println("SQLException");
