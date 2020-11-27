@@ -69,7 +69,7 @@ public class PageK3Servlet extends HttpServlet {
 			
 			PreparedStatement st = 
 					connection.prepareStatement(
-							"UPDATE KIGEN SET KIGEN = to_date('?','YY-MM-DD')"
+							"UPDATE KIGEN SET KIGEN = to_date(?,'YY-MM-DD')"
 						);
 			st.setString(1, date);
 			
