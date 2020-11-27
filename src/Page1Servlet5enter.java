@@ -16,8 +16,8 @@ import java.text.ParseException;
 /**
  * Servlet implementation class Page1Servlet
  */
-@WebServlet("/page1")
-public class Page1Servlet extends HttpServlet {
+@WebServlet("/page1-5en")
+public class Page1Servlet5enter extends HttpServlet {
 	private static final long serialVersionUID = 1L;
     
 	final String driverName = "oracle.jdbc.driver.OracleDriver";
@@ -28,7 +28,7 @@ public class Page1Servlet extends HttpServlet {
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Page1Servlet() {
+    public Page1Servlet5enter() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -63,15 +63,10 @@ public class Page1Servlet extends HttpServlet {
 			long dayDiff=(dateTime1-dateTime2)/(1000*60*60*24);
 		
 				request.setAttribute("day",dayDiff);
-			if(dayDiff<=10) {
-			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/JSP/page1-10L.jsp");
-			rd.forward(request, response);
-			}
 			
-			else {
-				RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/JSP/page1.jsp");
+				RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/JSP/page1-2.jsp");
 				rd.forward(request, response);
-			}
+			
 		
 		}catch(SQLException e){System.out.println(e);}
 	catch(ClassNotFoundException e){System.out.println(e);}
