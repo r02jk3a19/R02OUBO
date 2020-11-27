@@ -4,6 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<link rel="stylesheet"href="${pageContext.request.contextPath}/CSS/gamenn4.css">
 <title>Insert title here</title>
 </head>
 <body>
