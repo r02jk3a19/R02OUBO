@@ -4,7 +4,6 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet"href="${pageContext.request.contextPath}/CSS/gamenn4.css">
 <title>Insert title here</title>
 </head>
 <body>
@@ -16,6 +15,9 @@
 
 
 
+<p>応募期限まであと<%=request.getAttribute("day")%>日</p>
+
+
 
 
 <form method="post" action="./page1-2">
@@ -24,9 +26,7 @@
 7桁の数字B<input type="number" name="numb" placeholder="7桁の数字B" /><br/>
 <input type="submit" value="登録する" />
 </form>
-<form method="get" action="./page1-5en">
-<input type="submit" value="5つ登録画面に移動" />
-</form>
+
 
 </body>
 </html>
