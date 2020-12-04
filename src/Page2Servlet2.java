@@ -114,10 +114,25 @@ public class Page2Servlet2 extends HttpServlet {
 			
 			
 			else {
+				
+				int sum1=sum9(sNumA1);
+				int sum2=sum9(sNumA2);
+				int sum3=sum9(sNumA3);
+				int sum4=sum9(sNumA4);
+				int sum5=sum9(sNumA5);
+				
+				if(sum1%9!=0||sum2%9!=0||sum3%9!=0||sum4%9!=0||sum5%9!=0) {
+					
+					System.out.println("NOT9");
+					RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/JSP/page2.6.jsp");
+					rd.forward(request, response);
+				}
+				else {
+			
 			
 			PreparedStatement st = 
 					connection.prepareStatement(
-							"Insert into OUBO Values(?,?,?)"
+							"Insert into OUBO Values(?,?,?,SYSDATE)"
 						);
 			st.setString(1, sEname);
 			st.setString(2, sNumA1);
@@ -127,7 +142,7 @@ public class Page2Servlet2 extends HttpServlet {
 			
 			PreparedStatement dt = 
 					connection.prepareStatement(
-							"Insert into OUBO Values(?,?,?)"
+							"Insert into OUBO Values(?,?,?,SYSDATE)"
 						);
 			dt.setString(1, sEname);
 			dt.setString(2, sNumA2);
@@ -137,7 +152,7 @@ public class Page2Servlet2 extends HttpServlet {
 			
 			PreparedStatement ft = 
 					connection.prepareStatement(
-							"Insert into OUBO Values(?,?,?)"
+							"Insert into OUBO Values(?,?,?,SYSDATE)"
 						);
 			ft.setString(1, sEname);
 			ft.setString(2, sNumA3);
@@ -147,7 +162,7 @@ public class Page2Servlet2 extends HttpServlet {
 			
 			PreparedStatement gt = 
 					connection.prepareStatement(
-							"Insert into OUBO Values(?,?,?)"
+							"Insert into OUBO Values(?,?,?,SYSDATE)"
 						);
 			gt.setString(1, sEname);
 			gt.setString(2, sNumA4);
@@ -157,7 +172,7 @@ public class Page2Servlet2 extends HttpServlet {
 			
 			PreparedStatement ht = 
 					connection.prepareStatement(
-							"Insert into OUBO Values(?,?,?)"
+							"Insert into OUBO Values(?,?,?,SYSDATE)"
 						);
 			gt.setString(1, sEname);
 			gt.setString(2, sNumA5);
@@ -166,7 +181,7 @@ public class Page2Servlet2 extends HttpServlet {
 			gt.executeUpdate();
 			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/JSP/page2.jsp");
 			rd.forward(request, response);
-			}
+			}}
 		}catch(SQLException e) {
 			System.out.println("SQLException");
 			response.getWriter().println("SQLException");
@@ -180,4 +195,15 @@ public class Page2Servlet2 extends HttpServlet {
 		}
 	}
 
+	
+	private static int sum9(String numa) {
+		
+		String NumAK[]= numa.split("");
+		int sum=0;
+		for(int i=0;i<7;i++) {
+			sum+=Integer.parseInt(NumAK[i]);
+		
+		}
+		return sum;
+	}
 }

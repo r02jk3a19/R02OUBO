@@ -28,5 +28,9 @@
 <input type="submit" value="5つ登録画面に移動" />
 </form>
 
+<form method="get" action="./pageK1">
+<input type="submit" value="管理画面に移動" />
+</form>
+
 </body>
 </html>
