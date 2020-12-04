@@ -39,7 +39,7 @@ public class Kadai4Servlet extends HttpServlet {
 		final String url ="jdbc:oracle:thin:@192.168.54.226:1521/orcl";
 		final String id = "OUBO";
 		final String pass = "TOUSEN";
-		
+		 
 		try {
 
 		Class.forName(driverName);
