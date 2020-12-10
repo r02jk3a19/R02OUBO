@@ -70,7 +70,7 @@ public class Page2Servlet extends HttpServlet {
 			
 			PreparedStatement st = 
 					connection.prepareStatement(
-							"Insert into OUBO Values(?,?,?)"
+							"Insert into OUBO(EMAIL,NUMA,NUMB) Values(?,?,?)"
 						);
 			st.setString(1, sEname);
 			st.setString(2, sNumA);
