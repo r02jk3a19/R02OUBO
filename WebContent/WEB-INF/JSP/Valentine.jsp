@@ -9,8 +9,10 @@
 body{
 	background-repeat:no-repeat;
 	background-size:100%;
+	
 
 }
+
 
 
 </style>
@@ -25,9 +27,9 @@ body{
 <input type="email" name="email" placeholder="メールアドレスを入力"  /><br/>
 <font color="#f08080"face="'Gabriola',sans-serif"size="4">７桁の数字Ａ</font>
 <input type="number" name="numa" placeholder="7桁の数字A" /><br/>
-<font color="#f08080"face="'Gabriola',sans-serif"size="4">７桁の数字Ｂ</font>
+<font color="#f08080"face="'Gabriola',sans-serif"size="4">７桁の数字Ｂ　</font>
 <input type="number" name="numb" placeholder="7桁の数字B" /><br/>
-<input type="submit"class="click-down"value="登録する"style="color:#8b0000;background-color:#ffffff;border-color:#d2b48c;"/>
+<input type="submit"class="click-down"value="登録する"style="color:#8b0000;background-color:#ffffff;border-color:#d2b48c;" />
 </form>
 
 
