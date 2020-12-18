@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
-<body>
+
 <h1>仙台駅前第一デパート　セール抽選会　受付会場</h1>
 
 <form method="post" action="./page2">
