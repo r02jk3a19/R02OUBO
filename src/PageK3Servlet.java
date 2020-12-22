@@ -56,7 +56,7 @@ public class PageK3Servlet extends HttpServlet {
 		String year = request.getParameter("year");
 		String month = request.getParameter("month");
 		String day = request.getParameter("day");
-		String date=year+month+day;
+		String date=year+"/"+month+"/"+day;
 		
 		try {
 			Class.forName(driverName);
