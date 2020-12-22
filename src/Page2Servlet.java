@@ -87,7 +87,7 @@ public class Page2Servlet extends HttpServlet {
 			
 					PreparedStatement st = 
 							connection.prepareStatement(
-									"Insert into OUBO(EMAIL,NUMA,NUMB,CREATED) Values(?,?,?,SYSDATE)"
+									"Insert into OUBO Values(?,?,?,SYSDATE)"
 									);
 					st.setString(1, sEname);
 					st.setString(2, sNumA);
