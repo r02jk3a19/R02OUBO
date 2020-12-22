@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<!-この下の/game4.cssを変えればCSSが変わる。CSSフォルダはWebcontent直下->
+
 <link rel="stylesheet"href="${pageContext.request.contextPath}/CSS/gamenn4.css">
 <title>Insert title here</title>
 </head>
