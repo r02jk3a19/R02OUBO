@@ -65,7 +65,7 @@ public class Page2Servlet extends HttpServlet {
 				sum+=Integer.parseInt(NumAK[i]);
 			}
 			if(ss.next()==true) {
-				System.out.println("èdï°");
+				System.out.println("¬èd‚Ä¢¬°");
 				RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/JSP/page2.5.jsp");
 				rd.forward(request, response);
 			}
@@ -87,7 +87,7 @@ public class Page2Servlet extends HttpServlet {
 			
 					PreparedStatement st = 
 							connection.prepareStatement(
-									"Insert into OUBO Values(?,?,?,SYSDATE)"
+									"Insert into OUBO(EMAIL,NUMA,NUMB,CREATED) Values(?,?,?,SYSDATE)"
 									);
 					st.setString(1, sEname);
 					st.setString(2, sNumA);
