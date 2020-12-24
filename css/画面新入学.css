@@ -1,0 +1,11 @@
+@charset "utf-8";
+.body{
+
+}
+.img{
+		background-image:url(file:///Z:/git/R02OUBO/WebContent/WEB-INF/img/s.png);
+    	background-repeat:  no-repeat;
+    	width:1910px;
+    	height:952px;
+    	background-size:cover;
+}
