@@ -4,15 +4,18 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet"href="${pageContext.request.contextPath}/CSS/gamenn4.css">
 <title>Insert title here</title>
 </head>
 <body>
 
 
+
 <h1>仙台駅前第一デパート　セール抽選会　受付会場</h1>
 
 
+
+
+<p>応募期限まであと<%=request.getAttribute("day")%>日</p>
 
 
 
@@ -23,9 +26,7 @@
 7桁の数字B<input type="number" name="numb" placeholder="7桁の数字B" /><br/>
 <input type="submit" value="登録する" />
 </form>
-<form method="get" action="./page1-5en">
-<input type="submit" value="5つ登録画面に移動" />
-</form>
+
 
 </body>
 </html>

@@ -17,14 +17,14 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class Page1Servlet
  */
-@WebServlet("/page2")
-public class Page2Servlet extends HttpServlet {
+@WebServlet("/pageK2")
+public class PageK2Servlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Page2Servlet() {
+    public PageK2Servlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -38,7 +38,7 @@ public class Page2Servlet extends HttpServlet {
 		final String id = "OUBO";
 		final String pass = "TOUSEN";
 		
-		String sEname = request.getParameter("email");
+		String sName = request.getParameter("syouhin");
 		String sNumA = request.getParameter("numa");
 		String sNumB = request.getParameter("numb");
 
@@ -49,37 +49,20 @@ public class Page2Servlet extends HttpServlet {
 			
 			
 			
-			PreparedStatement rt = 
-					connection.prepareStatement(
-							"select NUMA,NUMB from OUBO where NUMA=? and NUMB=?"
-						);
-			rt.setString(1, sNumA);
-			rt.setString(2, sNumB);
 			
-			ResultSet ss = rt.executeQuery();
-			if(ss.next()==true) {
-				System.out.println("èdï°");
-				RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/JSP/page2.5.jsp");
-				rd.forward(request, response);
-			}
-			
-			
-			
-			
-			else {
 			
 			PreparedStatement st = 
 					connection.prepareStatement(
-							"Insert into OUBO(EMAIL,NUMA,NUMB) Values(?,?,?)"
+							"Insert into TOUSEN Values(?,?,?)"
 						);
-			st.setString(1, sEname);
+			st.setString(1, sName);
 			st.setString(2, sNumA);
 			st.setString(3, sNumB);
 			
 			st.executeUpdate();
-			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/JSP/page2.jsp");
+			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/JSP/pageK2.jsp");
 			rd.forward(request, response);
-			}
+			
 		}catch(SQLException e) {
 			System.out.println("SQLException");
 			response.getWriter().println("SQLException");
