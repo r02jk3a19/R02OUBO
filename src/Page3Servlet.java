@@ -28,7 +28,7 @@ public class Page3Servlet extends HttpServlet {
         super();
         // TODO Auto-generated constructor stub
     }
-
+ 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
@@ -46,6 +46,7 @@ public class Page3Servlet extends HttpServlet {
 						);
 			ResultSet rs = st.executeQuery();
 			rs.next();
+			
 			String sKigen = rs.getString("SKIGEN");
 			request.setAttribute("KIGEN", sKigen);
 			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/JSP/page3.jsp");
@@ -62,5 +63,4 @@ public class Page3Servlet extends HttpServlet {
 			e.printStackTrace(response.getWriter());
 		}
 		}
-
 }
